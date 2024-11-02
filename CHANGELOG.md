@@ -1,5 +1,399 @@
 # GoFormation Versioning Changelog
 
+# 1.0.0 (2024-11-02)
+
+
+### Bug Fixes
+
+* **alexa:** use the correct SkillId field ([#613](https://github.com/LewisMK/goformation/issues/613)) ([0841bbe](https://github.com/LewisMK/goformation/commit/0841bbe9fd8680d389f069f8b1420e81e6c94276))
+* **ci:** bump semantic-release-action ([510f9c6](https://github.com/LewisMK/goformation/commit/510f9c6e5ef243f3179ba4568b7365b3366c5c5d))
+* **CI:** fix broken GitHub PR integration ([#185](https://github.com/LewisMK/goformation/issues/185)) ([d42d00a](https://github.com/LewisMK/goformation/commit/d42d00a631651fc6648b1113abb30f4c14dc7cb6))
+* **CI:** only run semantic-release on push-to-master (not on pull requests) ([#184](https://github.com/LewisMK/goformation/issues/184)) ([c83945a](https://github.com/LewisMK/goformation/commit/c83945a582a9ccdda924b47a2831922434830a14))
+* **CI:** speed up PR builds by only downloading the cfn spec and regenerating resources on cron schedule (not on every build) ([7ae2a32](https://github.com/LewisMK/goformation/commit/7ae2a3216aa354781677f28eb453ee12d679ea36))
+* **CI:** Update TravisCI configuration based on https://github.com/se… ([#180](https://github.com/LewisMK/goformation/issues/180)) ([88e1e85](https://github.com/LewisMK/goformation/commit/88e1e850c0c88855a7dfac787ef0e5c5e4285383))
+* **CI:** Update TravisCI configuration for semantic-release to use jobs ([f6c2fee](https://github.com/LewisMK/goformation/commit/f6c2fee541b934d1411b12213b5ffc1a1817afe1))
+* **generate:** DependsOn should also accept a string ([09908b6](https://github.com/LewisMK/goformation/commit/09908b63bdf5cd326032008fa346e88c3765e1ae)), closes [#407](https://github.com/LewisMK/goformation/issues/407)
+* **generate:** remove duplicated line ([a18d04c](https://github.com/LewisMK/goformation/commit/a18d04c1844fbfacfdff709c51d09b6538603714))
+* generation of AppFlow properties without type ([bfcd40f](https://github.com/LewisMK/goformation/commit/bfcd40f16b3f395de2e02c483a15ddb52f550f8f))
+* **generator:** remove unused import ([cf87ba6](https://github.com/LewisMK/goformation/commit/cf87ba6f38737d60d15f7ece7384bee3a61a5b7c))
+* **generator:** update the generation making it easier to fix CF schema errors to generate ([#285](https://github.com/LewisMK/goformation/issues/285)) ([6751e5b](https://github.com/LewisMK/goformation/commit/6751e5b6ecbe1daee45171528cb1300efc6fb300))
+* **generator:** updated resources that support update/creation policy ([18c08b9](https://github.com/LewisMK/goformation/commit/18c08b988d0ae39d07bfc3e653bddb2621db8276))
+* **go:** Ran `go mod tidy` ([#233](https://github.com/LewisMK/goformation/issues/233)) ([7914822](https://github.com/LewisMK/goformation/commit/79148224a43eb530329dda8a2614ee7ff5111564))
+* **intrinsics:** change Fn::Sub to allow AWS pseudo parameters ([#275](https://github.com/LewisMK/goformation/issues/275)) ([5a48c27](https://github.com/LewisMK/goformation/commit/5a48c27630b945dcdc33133defd0241f898ccc52)), closes [#274](https://github.com/LewisMK/goformation/issues/274) [#202](https://github.com/LewisMK/goformation/issues/202)
+* **intrinsics:** continue to process children when transforming ([#599](https://github.com/LewisMK/goformation/issues/599)) ([396f0fe](https://github.com/LewisMK/goformation/commit/396f0fee8dd69af088d7573d7d2c5cf02df04c4c))
+* **intrinsics:** Join function to allow to use parameters of type `List<>` ([#309](https://github.com/LewisMK/goformation/issues/309)) ([6cc1cd3](https://github.com/LewisMK/goformation/commit/6cc1cd329047227674caaf1b546066e3043c6616))
+* **intrinsics:** split function ([286dd4c](https://github.com/LewisMK/goformation/commit/286dd4c339fe9c64e31eb14d8eb621fad205fa7a))
+* **intrinsics:** SplitPtr also as string ([86436f5](https://github.com/LewisMK/goformation/commit/86436f5474683881db0e8906e8e62ce079e68208))
+* **parser:** do not break if a non-intrinsic `Condition` statement is found in a YAML template ([#169](https://github.com/LewisMK/goformation/issues/169)) ([e4671e3](https://github.com/LewisMK/goformation/commit/e4671e399c13921428aabdec73c7f8a47be396d1))
+* **parser:** fix invalid YAML template error for custom tag marshaler ([#177](https://github.com/LewisMK/goformation/issues/177)) ([035d438](https://github.com/LewisMK/goformation/commit/035d438a36f8d79ed729d8b690b359964726abda))
+* **parser:** Select the correct AWS CloudFormation resource type based on similarity ([#183](https://github.com/LewisMK/goformation/issues/183)) ([5749b23](https://github.com/LewisMK/goformation/commit/5749b23d972a80f0a708549e48c2eb399d5ed7fd))
+* **parser:** Unmarshalling of resources with polymorphic properties (like S3 events) now works ([#188](https://github.com/LewisMK/goformation/issues/188)) ([8eff90a](https://github.com/LewisMK/goformation/commit/8eff90a21734deeb61c97010f63baed6ad04bb73))
+* **policies:** re-create deleted files ([bdd5860](https://github.com/LewisMK/goformation/commit/bdd58609a976e73fbd037866eadcb0db1f5a58a0))
+* remove file that doesn't exist anymore ([cc386b7](https://github.com/LewisMK/goformation/commit/cc386b71459ce11781f444d2065afee94faeeeba))
+* **resource.template:** remove print to standard output when JSON unmarshal in a resource fails ([d64f719](https://github.com/LewisMK/goformation/commit/d64f7194966f62cf8b7789cd8efaff4aaaaec0c3))
+* **resource.template:** remove print to standard output when JSON unmarshal in a resource fails (output of go generate) ([c039ac4](https://github.com/LewisMK/goformation/commit/c039ac4e9de2cb106f61252dbfe68164dbff38da))
+* **sam:** AWS::Serverless::Function Properties Architectures property should have a primitive type specified ([#420](https://github.com/LewisMK/goformation/issues/420)) ([3aa91ed](https://github.com/LewisMK/goformation/commit/3aa91edcb65cc6cfe8d0b2066944bc773acadc9f))
+* **sam:** DestinationConfig shouldn't contain OnSuccess property ([#406](https://github.com/LewisMK/goformation/issues/406)) ([6971966](https://github.com/LewisMK/goformation/commit/69719668de26c4d9f54b4db25b2ce42313413375)), closes [#404](https://github.com/LewisMK/goformation/issues/404)
+* **schema, parser:** change Transform json schema to allow multiple macros ([#268](https://github.com/LewisMK/goformation/issues/268)) ([072fc74](https://github.com/LewisMK/goformation/commit/072fc74628c8ee9a603c2e502ac458af916afc07)), closes [#267](https://github.com/LewisMK/goformation/issues/267)
+* **schema:** Add AddDefaultAuthorizerToCorsPreflight to Serverless Auth ([637150c](https://github.com/LewisMK/goformation/commit/637150c9f24eec6e4c86be18869340f12dd50763))
+* **schema:** Add architectures support for sam functions ([#419](https://github.com/LewisMK/goformation/issues/419)) ([b505b69](https://github.com/LewisMK/goformation/commit/b505b694b7fc1d663282b67cdeba71013c4ea5ec))
+* **schema:** Add cdkmetada resource ([#418](https://github.com/LewisMK/goformation/issues/418)) ([3d1b1f9](https://github.com/LewisMK/goformation/commit/3d1b1f91c8e592604becd080a7a61b4064784d03))
+* **schema:** Add Change and Update policies to the Unmarshal method ([#288](https://github.com/LewisMK/goformation/issues/288)) ([989b05f](https://github.com/LewisMK/goformation/commit/989b05fa78cb9e72f6d59298fb8bb287612f322e))
+* **schema:** add DisableExecuteApiEndpoint to Serverless API ([#538](https://github.com/LewisMK/goformation/issues/538)) ([1ff11e8](https://github.com/LewisMK/goformation/commit/1ff11e8fc9da67c6f3ba2118b30bb0d637e3b9af))
+* **schema:** Add Domain in AWS::Serverless::API schema ([dff256a](https://github.com/LewisMK/goformation/commit/dff256ac71a956b090bf957765fa3ab32288b13f))
+* **schema:** Add DynamoDBWritePolicy to sam policy template ([6f08c13](https://github.com/LewisMK/goformation/commit/6f08c136b112813bee5f329561ed25122f4a77cf))
+* **schema:** add FunctionResponseTypes property for kinesis events ([#539](https://github.com/LewisMK/goformation/issues/539)) ([3cff1ff](https://github.com/LewisMK/goformation/commit/3cff1fffe990b282ad7a2cab17792e33a110571d))
+* **schema:** add HttpApi, HttpApiFunctionAuth, RouteSettings ([#541](https://github.com/LewisMK/goformation/issues/541)) ([78913ea](https://github.com/LewisMK/goformation/commit/78913ea841dca3ecda1a3391e047694a015cc481))
+* **schema:** Add RequestModel and RequestParameters for AWS::Serverless::Function.EventSource ([e0c2673](https://github.com/LewisMK/goformation/commit/e0c26738fb4f8558cc8538b128a490924592b94c))
+* **schema:** Add S3WritePolicy to sam policy template ([c9f775e](https://github.com/LewisMK/goformation/commit/c9f775ede18530893f446eb7538f5364946fcf6f))
+* **schema:** Add SSMParameterReadPolicy and AWSSecretsManagerGetSecretValuePolicy into AWS::Serverless::Function.SAMPolicyTemplate ([7a85ab9](https://github.com/LewisMK/goformation/commit/7a85ab9fa99256ac54e0cf269ad10b1e5207c721))
+* **schema:** Add Version property into IAMPolicyDocument and fix Statement type ([846268a](https://github.com/LewisMK/goformation/commit/846268a5028d9ca2cf93dde2b88ef7d3ba01e45d))
+* **schema:** Allow any type for Parameter AllowedValues ([#392](https://github.com/LewisMK/goformation/issues/392)) ([ccc7fb0](https://github.com/LewisMK/goformation/commit/ccc7fb0509b1bdddf208e6a4463dd882ddfa4b69))
+* **schema:** AWS::CDK::Metadata resource should be automatically generated ([#421](https://github.com/LewisMK/goformation/issues/421)) ([65569f7](https://github.com/LewisMK/goformation/commit/65569f77c1708e52839ea486d5e10bdabdb24ce0)), closes [#418](https://github.com/LewisMK/goformation/issues/418)
+* **schema:** AWS::Serverless::Api.MethodSettings should be a list ([a1f340a](https://github.com/LewisMK/goformation/commit/a1f340a07e0ba4f21b8655da2c4d608849278901)), closes [#242](https://github.com/LewisMK/goformation/issues/242)
+* **schema:** AWS::Serverless::Function S3 notification filters ([#249](https://github.com/LewisMK/goformation/issues/249)) ([a50ef92](https://github.com/LewisMK/goformation/commit/a50ef9291026420ea8a5e74790fc49b8a9c7fd85)), closes [#74](https://github.com/LewisMK/goformation/issues/74)
+* **schema:** AWS::Serverless:Api.Cors ([#246](https://github.com/LewisMK/goformation/issues/246)) ([62fd56a](https://github.com/LewisMK/goformation/commit/62fd56a62586c65722f99dbd4c8308ab42fcfc1d)), closes [#244](https://github.com/LewisMK/goformation/issues/244)
+* **schema:** CloudFormation updates ([5dfc11a](https://github.com/LewisMK/goformation/commit/5dfc11a317bd70b1eb3076361c4882495440824c))
+* **schema:** CloudFormation Updates ([8411d38](https://github.com/LewisMK/goformation/commit/8411d38892c08cc907023814995fd55a7f1ebc53))
+* **schema:** CloudFormation Updates ([4616928](https://github.com/LewisMK/goformation/commit/46169288e85277a6b743311298b6e6509656f479))
+* **schema:** CloudFormation Updates ([1966587](https://github.com/LewisMK/goformation/commit/196658778942e7ad2f3c6cb9e07d5de404cb0a07))
+* **schema:** CloudFormation Updates ([42b62d6](https://github.com/LewisMK/goformation/commit/42b62d65e224cfa2f1d77e2aabf01b23dc985fce))
+* **schema:** CloudFormation Updates ([abdae93](https://github.com/LewisMK/goformation/commit/abdae936eeb5a68a16412578b525d29e018baf93))
+* **schema:** CloudFormation Updates ([4cc363a](https://github.com/LewisMK/goformation/commit/4cc363a8bb5c8cdc1ee019ad9a599041c66bd4b1))
+* **schema:** CloudFormation Updates ([7518bf6](https://github.com/LewisMK/goformation/commit/7518bf624060ff0792b70a32971fc4aa18fc4105))
+* **schema:** CloudFormation Updates ([51910fb](https://github.com/LewisMK/goformation/commit/51910fb69c387a5ae0898b3e04b6acad8c1770a9))
+* **schema:** CloudFormation Updates ([4bd6a73](https://github.com/LewisMK/goformation/commit/4bd6a73324760a9344347892d23643f6d2d88a08))
+* **schema:** CloudFormation Updates ([43c51be](https://github.com/LewisMK/goformation/commit/43c51beb362580c4baf0f19fe2f841e0a8772327))
+* **schema:** CloudFormation Updates ([f482dc7](https://github.com/LewisMK/goformation/commit/f482dc78648fdf0deefb3d0d7074aa58eac1db44))
+* **schema:** CloudFormation Updates ([17006b2](https://github.com/LewisMK/goformation/commit/17006b29899d0584376244a72d340d55590ed698))
+* **schema:** CloudFormation Updates ([ec540cb](https://github.com/LewisMK/goformation/commit/ec540cbc183b10eb79486edef1b19abef4c40831))
+* **schema:** CloudFormation Updates ([be36ee0](https://github.com/LewisMK/goformation/commit/be36ee0cc3fa712b8e38d9cd010b2729eb7068be))
+* **schema:** CloudFormation Updates ([728f824](https://github.com/LewisMK/goformation/commit/728f8241b20bb75cd4c748d2357ccfd5c232a0ed))
+* **schema:** CloudFormation Updates ([ecdb915](https://github.com/LewisMK/goformation/commit/ecdb9155cccc3bfe81861fe146873e28f63eef12))
+* **schema:** CloudFormation Updates ([ee27593](https://github.com/LewisMK/goformation/commit/ee275930ee73851f175938a19798950ece018ce1))
+* **schema:** CloudFormation Updates ([d6d5f89](https://github.com/LewisMK/goformation/commit/d6d5f8975e58aa967698942b9545735a346836d8))
+* **schema:** CloudFormation Updates ([9596ea8](https://github.com/LewisMK/goformation/commit/9596ea8ea07befa4b813bac8db8c1f5082d61e2d))
+* **schema:** CloudFormation Updates ([bbf810f](https://github.com/LewisMK/goformation/commit/bbf810f4ebdf46ccf67521d3da541666da34e3a8))
+* **schema:** CloudFormation Updates ([5e536c5](https://github.com/LewisMK/goformation/commit/5e536c5fe9bc85241a502f056d2bbd20e6e41160))
+* **schema:** CloudFormation Updates ([cf3b23a](https://github.com/LewisMK/goformation/commit/cf3b23a64fce3e341d4fbe7d98f78d9bc453d503))
+* **schema:** CloudFormation Updates ([e538ceb](https://github.com/LewisMK/goformation/commit/e538ceb0713392b8f67fbf36f30d371ea76e6ba1))
+* **schema:** CloudFormation Updates ([ba9ea96](https://github.com/LewisMK/goformation/commit/ba9ea96a7d189df3adb02544351bcab56597a47a))
+* **schema:** CloudFormation Updates ([ddc5f72](https://github.com/LewisMK/goformation/commit/ddc5f72dd9004dc6734cf991b5a087bce4a04f96))
+* **schema:** CloudFormation Updates ([94ac559](https://github.com/LewisMK/goformation/commit/94ac5596f37b7b2212070702db08ebcf9f4cc8ef))
+* **schema:** CloudFormation Updates ([5e99a59](https://github.com/LewisMK/goformation/commit/5e99a5976008b51e52de86b246505e51be881b24))
+* **schema:** CloudFormation Updates ([976990f](https://github.com/LewisMK/goformation/commit/976990fe8c5d44778a7de03a3df5197875a600cb))
+* **schema:** CloudFormation Updates ([ca2da2e](https://github.com/LewisMK/goformation/commit/ca2da2ed7d282234abd0351bc55c90dac9ceb7f2))
+* **schema:** CloudFormation Updates ([065bf7e](https://github.com/LewisMK/goformation/commit/065bf7e1f075d83c47da398ecf31b6d0582165d1))
+* **schema:** CloudFormation Updates ([590b489](https://github.com/LewisMK/goformation/commit/590b4893c639534520a3479ca6a00779fd194031))
+* **schema:** CloudFormation Updates ([998c192](https://github.com/LewisMK/goformation/commit/998c1928695e32c580e20a2e79df0c99e4d366d9))
+* **schema:** CloudFormation Updates ([cdcc602](https://github.com/LewisMK/goformation/commit/cdcc6022ec63ecbe7a7c20c3c12bf68baad97dfe))
+* **schema:** CloudFormation Updates ([7e80942](https://github.com/LewisMK/goformation/commit/7e809428bd2c81f4ef52b9034bca39fe7e5c2442))
+* **schema:** CloudFormation Updates ([7fedc99](https://github.com/LewisMK/goformation/commit/7fedc99204bfa22d0ffc072f620c59a5bc9ac50d))
+* **schema:** CloudFormation Updates ([83f2d49](https://github.com/LewisMK/goformation/commit/83f2d49319fef2d331eadab1c42b3e5774cd6613))
+* **schema:** CloudFormation Updates ([bd8a2ac](https://github.com/LewisMK/goformation/commit/bd8a2acffb312cedcc5c1a0c2a2fc4bfcd440e4a))
+* **schema:** CloudFormation Updates ([af4f471](https://github.com/LewisMK/goformation/commit/af4f471232b86642daa3fb2c8a4588f24e238530))
+* **schema:** CloudFormation Updates ([5d02a2b](https://github.com/LewisMK/goformation/commit/5d02a2b7d1eafb7b7d7dec821de9767a5d5f9b53))
+* **schema:** CloudFormation Updates ([35a4b24](https://github.com/LewisMK/goformation/commit/35a4b24e21ed39f1005d5c452804cbe2acdd4de1))
+* **schema:** CloudFormation Updates ([bc360ab](https://github.com/LewisMK/goformation/commit/bc360ab35964268ef7c11110e2a1f6efe59280bd))
+* **schema:** CloudFormation Updates ([0f4ade8](https://github.com/LewisMK/goformation/commit/0f4ade82c3a9c3e139929a273c9e9bdc35612e2f))
+* **schema:** CloudFormation Updates ([0de7ca4](https://github.com/LewisMK/goformation/commit/0de7ca404158b1c1faa618fec93e032d42eb90d0))
+* **schema:** CloudFormation Updates ([dcee612](https://github.com/LewisMK/goformation/commit/dcee61222d00afa083519ecfe5cb60bd07b8b0ae))
+* **schema:** CloudFormation Updates ([7858395](https://github.com/LewisMK/goformation/commit/78583955ee7d232715a96a97c9bddf03f3a0ab8d))
+* **schema:** CloudFormation Updates ([319d00f](https://github.com/LewisMK/goformation/commit/319d00fa1d94fdca42e6f9c58f407e1965a07ad7))
+* **schema:** CloudFormation Updates ([8432365](https://github.com/LewisMK/goformation/commit/8432365c586ee1f2a69df6afa8c699d90781f527))
+* **schema:** CloudFormation Updates ([68156bc](https://github.com/LewisMK/goformation/commit/68156bc8aecb5ef63e6b9c2c597913d6d156e2cc))
+* **schema:** CloudFormation Updates ([d2d083a](https://github.com/LewisMK/goformation/commit/d2d083a8651a7c61f5f7748acb7ba0718e2ed5bd))
+* **schema:** CloudFormation Updates ([9ce0a19](https://github.com/LewisMK/goformation/commit/9ce0a19c9aa2c22c487aed1a3b2e24ea6cea731f))
+* **schema:** CloudFormation Updates ([d59706b](https://github.com/LewisMK/goformation/commit/d59706b488b4c73b92ef395ceef64160b2ecfb3d))
+* **schema:** CloudFormation Updates ([801c7f8](https://github.com/LewisMK/goformation/commit/801c7f886413d3015d69b8c49382631ad9c7528d))
+* **schema:** CloudFormation Updates ([e06f6e2](https://github.com/LewisMK/goformation/commit/e06f6e26aeeae9c5aa08181c9394be12ecd61aae))
+* **schema:** CloudFormation Updates ([13095ef](https://github.com/LewisMK/goformation/commit/13095ef6facddea686bc92d0b519e3578e5810d9))
+* **schema:** CloudFormation Updates ([c5b4ae3](https://github.com/LewisMK/goformation/commit/c5b4ae3f38e61aedf2535a92204c28cac4a048ca))
+* **schema:** CloudFormation Updates ([2f3e802](https://github.com/LewisMK/goformation/commit/2f3e8023c760b0869ec947a520ffb60a4ed81c1c))
+* **schema:** CloudFormation Updates ([bbbbbed](https://github.com/LewisMK/goformation/commit/bbbbbeda4560c6d4296324edea11392ed31cc8de))
+* **schema:** CloudFormation Updates ([#320](https://github.com/LewisMK/goformation/issues/320)) ([49879b4](https://github.com/LewisMK/goformation/commit/49879b45f79dc9880071facd32d76cc4bf0570eb))
+* **schema:** CloudFormation Updates ([#329](https://github.com/LewisMK/goformation/issues/329)) ([4c1362b](https://github.com/LewisMK/goformation/commit/4c1362bac14a3d6fc2cebd56eddcaf440228a4e9))
+* **schema:** CloudFormation Updates ([#330](https://github.com/LewisMK/goformation/issues/330)) ([4070319](https://github.com/LewisMK/goformation/commit/40703191771425b3519128027478cf740d10f2d9))
+* **schema:** CloudFormation Updates ([#331](https://github.com/LewisMK/goformation/issues/331)) ([12f9c83](https://github.com/LewisMK/goformation/commit/12f9c835cbd9b980e06e30c458f95b14e16a3771))
+* **schema:** CloudFormation Updates ([#333](https://github.com/LewisMK/goformation/issues/333)) ([0fec2c4](https://github.com/LewisMK/goformation/commit/0fec2c466ad18f0852de492ab837c1cd51897b12))
+* **schema:** CloudFormation Updates ([#341](https://github.com/LewisMK/goformation/issues/341)) ([b65192b](https://github.com/LewisMK/goformation/commit/b65192ba5d65da80351698c0eae194c02e5afcf6))
+* **schema:** CloudFormation Updates ([#342](https://github.com/LewisMK/goformation/issues/342)) ([f047bed](https://github.com/LewisMK/goformation/commit/f047bedef1193c8755bebac7f9edd3d872d52e1a))
+* **schema:** CloudFormation Updates ([#347](https://github.com/LewisMK/goformation/issues/347)) ([d49d514](https://github.com/LewisMK/goformation/commit/d49d514d3cff735b2e9fffc261e6b6c05f1f8a5a))
+* **schema:** CloudFormation Updates ([#348](https://github.com/LewisMK/goformation/issues/348)) ([5dd2417](https://github.com/LewisMK/goformation/commit/5dd2417ddc3a063cbb2bba612938671e60bbb5ca))
+* **schema:** CloudFormation Updates ([#349](https://github.com/LewisMK/goformation/issues/349)) ([a012fde](https://github.com/LewisMK/goformation/commit/a012fde9485a0fa185d9ed05bfc9fcf948fe15eb))
+* **schema:** CloudFormation Updates ([#351](https://github.com/LewisMK/goformation/issues/351)) ([53556a3](https://github.com/LewisMK/goformation/commit/53556a3ff4a74666966e181d006448655533b2ba))
+* **schema:** CloudFormation Updates ([#353](https://github.com/LewisMK/goformation/issues/353)) ([eee9123](https://github.com/LewisMK/goformation/commit/eee912305e08843fc112940333b93a6fc6aaf0ed))
+* **schema:** CloudFormation Updates ([#357](https://github.com/LewisMK/goformation/issues/357)) ([4d320a5](https://github.com/LewisMK/goformation/commit/4d320a56aa6fc79cd3a6a951c31a8c6580c68c99))
+* **schema:** CloudFormation Updates ([#361](https://github.com/LewisMK/goformation/issues/361)) ([ece24b8](https://github.com/LewisMK/goformation/commit/ece24b8ffa21fac279e13fa20d9ccd2f21fe6e7e))
+* **schema:** CloudFormation Updates ([#367](https://github.com/LewisMK/goformation/issues/367)) ([1a42e5b](https://github.com/LewisMK/goformation/commit/1a42e5b414f371e2fd185d2fe796eca3934f1977))
+* **schema:** CloudFormation Updates ([#371](https://github.com/LewisMK/goformation/issues/371)) ([b4a4521](https://github.com/LewisMK/goformation/commit/b4a4521545419c5fb910a3a44a1e11e13c52f5e2))
+* **schema:** CloudFormation Updates ([#372](https://github.com/LewisMK/goformation/issues/372)) ([95c8bf5](https://github.com/LewisMK/goformation/commit/95c8bf594275cfcd9e3464dadb2e48c6c45357ff))
+* **schema:** CloudFormation Updates ([#375](https://github.com/LewisMK/goformation/issues/375)) ([5d0d4f2](https://github.com/LewisMK/goformation/commit/5d0d4f2f02b9f21d0db73ab6716578046d9abc21))
+* **schema:** CloudFormation Updates ([#381](https://github.com/LewisMK/goformation/issues/381)) ([0714ecf](https://github.com/LewisMK/goformation/commit/0714ecf5f1ae72116208da58fb5d9f1d33e3bb84))
+* **schema:** CloudFormation Updates ([#384](https://github.com/LewisMK/goformation/issues/384)) ([823b7a4](https://github.com/LewisMK/goformation/commit/823b7a4dba77bb702fdc0eb3e14e6f642afe5af0))
+* **schema:** CloudFormation Updates ([#385](https://github.com/LewisMK/goformation/issues/385)) ([8b5b816](https://github.com/LewisMK/goformation/commit/8b5b8164786d7815c4e9f0b603d099198dfa5d46))
+* **schema:** CloudFormation Updates ([#387](https://github.com/LewisMK/goformation/issues/387)) ([71f83ce](https://github.com/LewisMK/goformation/commit/71f83ce7b426e45238f64fc11edc9045c280d992))
+* **schema:** CloudFormation Updates ([#388](https://github.com/LewisMK/goformation/issues/388)) ([ae6ed10](https://github.com/LewisMK/goformation/commit/ae6ed10530aaf15b34026207d5284e49659ce679))
+* **schema:** CloudFormation Updates ([#390](https://github.com/LewisMK/goformation/issues/390)) ([ac83603](https://github.com/LewisMK/goformation/commit/ac8360341ffc4e6576102a008a39b1674ea748fa))
+* **schema:** CloudFormation Updates ([#393](https://github.com/LewisMK/goformation/issues/393)) ([b005b8c](https://github.com/LewisMK/goformation/commit/b005b8c6e8df3791af021593423f09cb70c316cf))
+* **schema:** CloudFormation Updates ([#398](https://github.com/LewisMK/goformation/issues/398)) ([c7ebbd3](https://github.com/LewisMK/goformation/commit/c7ebbd3328f69e1eaaa4b315f775b1caadcf4191))
+* **schema:** CloudFormation Updates ([#400](https://github.com/LewisMK/goformation/issues/400)) ([1606bbe](https://github.com/LewisMK/goformation/commit/1606bbe6d8a2b0bd206505ec38542e8d7f6512d6))
+* **schema:** CloudFormation Updates ([#401](https://github.com/LewisMK/goformation/issues/401)) ([fa89e23](https://github.com/LewisMK/goformation/commit/fa89e2381d69c66fb93496ab35b57a8f52772323))
+* **schema:** CloudFormation Updates ([#408](https://github.com/LewisMK/goformation/issues/408)) ([2ffeeac](https://github.com/LewisMK/goformation/commit/2ffeeac1cd90ec90807af825e49a15b6c8346431))
+* **schema:** CloudFormation Updates ([#415](https://github.com/LewisMK/goformation/issues/415)) ([e560a0f](https://github.com/LewisMK/goformation/commit/e560a0fece3347f1aec326f643400423c2c7bc03))
+* **schema:** CloudFormation Updates ([#422](https://github.com/LewisMK/goformation/issues/422)) ([61378b5](https://github.com/LewisMK/goformation/commit/61378b5bad094f764289d53c87b2b2c91f118491))
+* **schema:** CloudFormation Updates ([#510](https://github.com/LewisMK/goformation/issues/510)) ([25e2ea4](https://github.com/LewisMK/goformation/commit/25e2ea4445d58bf0a44c2b6f738338bfd6f2d0a5))
+* **schema:** CloudFormation Updates ([#524](https://github.com/LewisMK/goformation/issues/524)) ([4fbffa5](https://github.com/LewisMK/goformation/commit/4fbffa57d7591e5ae9b6ea08551f90727facc92a))
+* **schema:** CloudFormation Updates ([#525](https://github.com/LewisMK/goformation/issues/525)) ([fa6c239](https://github.com/LewisMK/goformation/commit/fa6c23958205723db0e3f2d93edba97d848d6388))
+* **schema:** CloudFormation Updates ([#530](https://github.com/LewisMK/goformation/issues/530)) ([a65a99f](https://github.com/LewisMK/goformation/commit/a65a99fcad4ae808b5c6797cbfe2f84893e5afac))
+* **schema:** CloudFormation Updates ([#531](https://github.com/LewisMK/goformation/issues/531)) ([83b04c9](https://github.com/LewisMK/goformation/commit/83b04c96fb481eb7ac4a98397c2f88989ae21821))
+* **schema:** CloudFormation Updates ([#531](https://github.com/LewisMK/goformation/issues/531)) ([d72e4af](https://github.com/LewisMK/goformation/commit/d72e4af5ba72e2c0f9905a4041677264fcbf7def))
+* **schema:** CloudFormation Updates ([#532](https://github.com/LewisMK/goformation/issues/532)) ([d94f3f2](https://github.com/LewisMK/goformation/commit/d94f3f2bc7ac2b6a28fb5155018664727a934f8c))
+* **schema:** CloudFormation Updates ([#536](https://github.com/LewisMK/goformation/issues/536)) ([35fa19d](https://github.com/LewisMK/goformation/commit/35fa19d2c33e88cb3fc10e13e7c4b03c25ce35c4))
+* **schema:** CloudFormation Updates ([#540](https://github.com/LewisMK/goformation/issues/540)) ([9eeb893](https://github.com/LewisMK/goformation/commit/9eeb893a1b575978ef3d265f8d05e9457b275830))
+* **schema:** CloudFormation Updates ([#544](https://github.com/LewisMK/goformation/issues/544)) ([5ab72b1](https://github.com/LewisMK/goformation/commit/5ab72b1eb1dc54eb90eb19265388cd0d6e9eb21a))
+* **schema:** CloudFormation Updates ([#549](https://github.com/LewisMK/goformation/issues/549)) ([1583466](https://github.com/LewisMK/goformation/commit/158346630da695ecf90e3d883e4ce9228276b22a))
+* **schema:** CloudFormation Updates ([#552](https://github.com/LewisMK/goformation/issues/552)) ([44a6061](https://github.com/LewisMK/goformation/commit/44a60613c5f135cc87ee8d46ef197dfde6f05143))
+* **schema:** CloudFormation Updates ([#555](https://github.com/LewisMK/goformation/issues/555)) ([d7d9cce](https://github.com/LewisMK/goformation/commit/d7d9cce4e56e98e47afe632bb5b78d16283b09c7))
+* **schema:** CloudFormation Updates ([#562](https://github.com/LewisMK/goformation/issues/562)) ([307cd37](https://github.com/LewisMK/goformation/commit/307cd37a01f40c5334ddea2be7f1204e6f0c76f3))
+* **schema:** CloudFormation Updates ([#566](https://github.com/LewisMK/goformation/issues/566)) ([1612640](https://github.com/LewisMK/goformation/commit/16126408f0d44c5f548ad81c58096c4e5b2579f8))
+* **schema:** CloudFormation Updates ([#568](https://github.com/LewisMK/goformation/issues/568)) ([2db6261](https://github.com/LewisMK/goformation/commit/2db626139328f662da3a834c7a78a1b983a47861))
+* **schema:** CloudFormation Updates ([#569](https://github.com/LewisMK/goformation/issues/569)) ([961063c](https://github.com/LewisMK/goformation/commit/961063c03dd77b0873d427230c63123234c96474))
+* **schema:** CloudFormation Updates ([#575](https://github.com/LewisMK/goformation/issues/575)) ([76aab2e](https://github.com/LewisMK/goformation/commit/76aab2e8a0ba485b281436783a1c16969fc93294))
+* **schema:** CloudFormation Updates ([#581](https://github.com/LewisMK/goformation/issues/581)) ([da7efea](https://github.com/LewisMK/goformation/commit/da7efeae7a1ab20faa7aeceaa41adf965a136b7f))
+* **schema:** CloudFormation Updates ([#582](https://github.com/LewisMK/goformation/issues/582)) ([78e986d](https://github.com/LewisMK/goformation/commit/78e986d36501a5180374db300740e42b1265f24d))
+* **schema:** CloudFormation Updates ([#583](https://github.com/LewisMK/goformation/issues/583)) ([e7cc49b](https://github.com/LewisMK/goformation/commit/e7cc49b155c77c7943d6ef1a5b9a652e674140ea))
+* **schema:** CloudFormation Updates ([#584](https://github.com/LewisMK/goformation/issues/584)) ([f2508fc](https://github.com/LewisMK/goformation/commit/f2508fc24cc3774dca797c42487e00202872d895))
+* **schema:** CloudFormation Updates ([#585](https://github.com/LewisMK/goformation/issues/585)) ([e749f56](https://github.com/LewisMK/goformation/commit/e749f566f6487c42c445717f6e606e9ecbbc85d3))
+* **schema:** CloudFormation Updates ([#588](https://github.com/LewisMK/goformation/issues/588)) ([d2464f1](https://github.com/LewisMK/goformation/commit/d2464f1d095430e8d14eb9b13339d8cf0334753b))
+* **schema:** CloudFormation Updates ([#589](https://github.com/LewisMK/goformation/issues/589)) ([42b235b](https://github.com/LewisMK/goformation/commit/42b235bd46f1e2c9cbad21715dc844cdae5b7136))
+* **schema:** CloudFormation Updates ([#592](https://github.com/LewisMK/goformation/issues/592)) ([7a7167e](https://github.com/LewisMK/goformation/commit/7a7167e93559f40dff4bf7d603d5e27e644dc14b))
+* **schema:** CloudFormation Updates ([#593](https://github.com/LewisMK/goformation/issues/593)) ([2915807](https://github.com/LewisMK/goformation/commit/2915807431b4e0cd4723a6b3a1654395507fad71))
+* **schema:** CloudFormation Updates ([#595](https://github.com/LewisMK/goformation/issues/595)) ([90e89e7](https://github.com/LewisMK/goformation/commit/90e89e73193d1b747660acd13a2bd31959fe2d56))
+* **schema:** CloudFormation Updates ([#598](https://github.com/LewisMK/goformation/issues/598)) ([fa586c8](https://github.com/LewisMK/goformation/commit/fa586c83d9b5867fffb5a8a1539544488fe0a6a8))
+* **schema:** CloudFormation Updates ([#601](https://github.com/LewisMK/goformation/issues/601)) ([cad0a1f](https://github.com/LewisMK/goformation/commit/cad0a1f9df29b6d89546fa206839d0964b8ed8f4))
+* **schema:** CloudFormation Updates ([#603](https://github.com/LewisMK/goformation/issues/603)) ([5ceb69c](https://github.com/LewisMK/goformation/commit/5ceb69cda072e937bba07c4a00ff49230b51a348))
+* **schema:** CloudFormation Updates ([#604](https://github.com/LewisMK/goformation/issues/604)) ([8520deb](https://github.com/LewisMK/goformation/commit/8520deb6884ec2edca5eb2f0900bc6ec6add0c1c))
+* **schema:** CloudFormation Updates ([#609](https://github.com/LewisMK/goformation/issues/609)) ([f9d092c](https://github.com/LewisMK/goformation/commit/f9d092cb83482a9b5dab678dcbe9368aa9197a77))
+* **schema:** CloudFormation Updates ([#612](https://github.com/LewisMK/goformation/issues/612)) ([35938c1](https://github.com/LewisMK/goformation/commit/35938c1aaa82d216671a5d351e161ddf33e1e3dd))
+* **schema:** CloudFormation Updates ([#618](https://github.com/LewisMK/goformation/issues/618)) ([a5d2ce2](https://github.com/LewisMK/goformation/commit/a5d2ce262f0c4764a3c86d41e1c50fa0356104ea))
+* **schema:** Fix JSON Schema generation commas for InclusivePrimitiveItemTypes ([28db940](https://github.com/LewisMK/goformation/commit/28db9408fa2a0b4ffc9814dd0509d8026d9de223))
+* **schema:** fixed incorrect field type for AWS::Serverless::Application.Location ([#167](https://github.com/LewisMK/goformation/issues/167)) ([3f1817b](https://github.com/LewisMK/goformation/commit/3f1817be1603c702532504a77309b67a7e99be66))
+* **schema:** generated schema acording to new rules ([d9dc863](https://github.com/LewisMK/goformation/commit/d9dc86308402cf56b966a55a23fbcd2ca2c92291))
+* **schema:** maps within YAML templates should allow unknown fields/properties ([3b6e359](https://github.com/LewisMK/goformation/commit/3b6e359876834a9be87a5bc10e91adc6060a08a1))
+* **schema:** Ordered cloudformation/all.go file ([#238](https://github.com/LewisMK/goformation/issues/238)) ([91254f3](https://github.com/LewisMK/goformation/commit/91254f30925b89db5e79604d812a1ee9279267bd))
+* **schema:** re-generate schema ([58dc56b](https://github.com/LewisMK/goformation/commit/58dc56beb3a58acc391a5b3020f8cf3fabc19d6b))
+* **schema:** re-generated schema ([eae0a91](https://github.com/LewisMK/goformation/commit/eae0a9138e8e5417bd615bcee6ba02301e813ba2))
+* **schema:** regenerated with latest code ([33f99bf](https://github.com/LewisMK/goformation/commit/33f99bf7d46415148bc42a1906a4b40843fa5c16))
+* **schema:** S3Location or String support for AWS::Serverless::LayerVersion.ContentUri ([#339](https://github.com/LewisMK/goformation/issues/339)) ([6e39ebe](https://github.com/LewisMK/goformation/commit/6e39ebe6e598e68f366b61b721e1ada2bdf268af)), closes [#337](https://github.com/LewisMK/goformation/issues/337)
+* **schema:** string should be a primitivetype ([5fa746c](https://github.com/LewisMK/goformation/commit/5fa746cc18b5ab0892f987f48d37989783787b33))
+* **schema:** Support Version field in custom resource ([#391](https://github.com/LewisMK/goformation/issues/391)) ([eef8f36](https://github.com/LewisMK/goformation/commit/eef8f361a61e0a3827b271019672c31a44937664))
+* **schema:** version attribute of Function::S3Location in SAM is optional ([#226](https://github.com/LewisMK/goformation/issues/226)) ([14b754c](https://github.com/LewisMK/goformation/commit/14b754c069ef0dfa7abd26e235ccb258b3c72f53)), closes [/github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3](https://github.com//github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md/issues/s3) [#87](https://github.com/LewisMK/goformation/issues/87)
+* **spec:** corrected AWS::Serverless::Api.Auth.Authorizers to be of type JSON rather than string  ([#164](https://github.com/LewisMK/goformation/issues/164)) ([4cf1bee](https://github.com/LewisMK/goformation/commit/4cf1bee97f9355222eff8312e2b4a405562bf4be))
+* **template:** field Export on type Output should be pointer ([#299](https://github.com/LewisMK/goformation/issues/299)) ([7d5870e](https://github.com/LewisMK/goformation/commit/7d5870eff12e2ca9c011fb41b6748d0c3ec5f1d9)), closes [#294](https://github.com/LewisMK/goformation/issues/294)
+
+
+### Code Refactoring
+
+* **generator:** moving resources and policies into their own packages ([#161](https://github.com/LewisMK/goformation/issues/161)) ([03a0123](https://github.com/LewisMK/goformation/commit/03a0123fb311f946c628403b6e6b79528a92b912))
+
+
+* feat!: bump release to v7 ([a30de92](https://github.com/LewisMK/goformation/commit/a30de9219e65b2b2f56df225eb687abd23aaa49c))
+* Fix method conflicts (#245) ([d0b0a8b](https://github.com/LewisMK/goformation/commit/d0b0a8bc322e27f72e840c9847f3c822d4efa933)), closes [#245](https://github.com/LewisMK/goformation/issues/245) [#241](https://github.com/LewisMK/goformation/issues/241) [#294](https://github.com/LewisMK/goformation/issues/294)
+* Group CloudFormation resources by AWS service name (#234) ([d0749e6](https://github.com/LewisMK/goformation/commit/d0749e6a8fc5e7b0ddc301aef0170e12c7dc459c)), closes [#234](https://github.com/LewisMK/goformation/issues/234)
+
+
+### feature
+
+* **types:** added utils to create pointer types ([4a68a60](https://github.com/LewisMK/goformation/commit/4a68a60c13392084a04d71f69663b03959edd76d))
+
+
+### Features
+
+* Added semantic-release CI setup ([a9b368a](https://github.com/LewisMK/goformation/commit/a9b368ae3391788cbb9f5c0282a1cba94fe529f9))
+* Added semantic-release configuration file ([3b25fdb](https://github.com/LewisMK/goformation/commit/3b25fdb72c33bc717a2cef9f708a4ddaf32e6262))
+* bump Golang versions ([#654](https://github.com/LewisMK/goformation/issues/654)) ([9765e0a](https://github.com/LewisMK/goformation/commit/9765e0a9463be738a96b86385780a555294ae110))
+* **CI:** auto-generate AUTHORS.md file ([b37af7b](https://github.com/LewisMK/goformation/commit/b37af7b979a6eec4193cfb813b6d4f6bbda29c8f))
+* force release ([354d4cb](https://github.com/LewisMK/goformation/commit/354d4cbc14e3a7f6ea3b0d77d8fed02b9e9ba213))
+* **generate:** allow for optional params ([d9bfdff](https://github.com/LewisMK/goformation/commit/d9bfdff22704915630f6341efbd11ceac7f3315d))
+* **generator:** add support for new sagemaker properties ([bfd39c4](https://github.com/LewisMK/goformation/commit/bfd39c480e6460ef1d1b3cf339ca30d8dd202c92))
+* **generator:** remove generation of interface pointers ([315dde3](https://github.com/LewisMK/goformation/commit/315dde31de45419c105e889a5bf29b6e4b1f42c0))
+* **go:** bump to go1.18 minimum ([#579](https://github.com/LewisMK/goformation/issues/579)) ([9c453fa](https://github.com/LewisMK/goformation/commit/9c453fa052700a77071961a9e731e4ae59e7ad9d))
+* **go:** drop support for go 1.13 and 1.14 ([05bb704](https://github.com/LewisMK/goformation/commit/05bb704b8824417888bc7880f3478d9f2a380737))
+* **go:** drop support for go 1.15 ([2e45a2b](https://github.com/LewisMK/goformation/commit/2e45a2bbb85234c489f4c7cbb644c325a793f704))
+* **if intrinsics:** generalized solution to support more types ([c66e47b](https://github.com/LewisMK/goformation/commit/c66e47bcabe0c26f1dc81d9e671473a0c4fe7ef1))
+* **intrinsics:** Add cloudformation.TransformFn() ([#352](https://github.com/LewisMK/goformation/issues/352)) ([9a1e331](https://github.com/LewisMK/goformation/commit/9a1e3315fd0dcbe2e9a1fcbd0994de7470a2bd9a))
+* **intrinsics:** add intrinsics ptr versions ([ffdc5af](https://github.com/LewisMK/goformation/commit/ffdc5af445f9a055831ad1130000a343799f51b1))
+* **intrinsics:** Add SubVars to Sub with replacement variables ([#411](https://github.com/LewisMK/goformation/issues/411)) ([0940790](https://github.com/LewisMK/goformation/commit/094079090ca6b9ec8a98b1eada9fe3ca0e9c163c))
+* **intrinsics:** add support for base64 encoded string in instrinsic if function ([#414](https://github.com/LewisMK/goformation/issues/414)) ([652501b](https://github.com/LewisMK/goformation/commit/652501b0c05dd136f7faa5ab7b291f56386f0f3f)), closes [#412](https://github.com/LewisMK/goformation/issues/412)
+* **intrinsics:** add support for FindInMap default ([#546](https://github.com/LewisMK/goformation/issues/546)) ([5f27b01](https://github.com/LewisMK/goformation/commit/5f27b011a112783e665c9edf0337d1e4d6666289))
+* **intrinsics:** Allow for int in Fn::Equals ([#346](https://github.com/LewisMK/goformation/issues/346)) ([dd6cd2d](https://github.com/LewisMK/goformation/commit/dd6cd2d943eca6b4b0118066665a850ad0f2cc50))
+* **intrinsics:** support for nested intrinsics ([#571](https://github.com/LewisMK/goformation/issues/571)) ([5e9e9c4](https://github.com/LewisMK/goformation/commit/5e9e9c401f2690b7d3394e7b73c0637d97ba0677))
+* **lambda_function:** add EphemeralStorage property ([#619](https://github.com/LewisMK/goformation/issues/619)) ([73f7eb2](https://github.com/LewisMK/goformation/commit/73f7eb22da964fdfe797f1af80001cdcc5eb2b24))
+* **lambda_function:** add FunctionUrlConfig property ([25103fc](https://github.com/LewisMK/goformation/commit/25103fcd21b490021ee8cfd23674599afc1f0a14))
+* **lib:** Test feature (please ignore) ([1df611a](https://github.com/LewisMK/goformation/commit/1df611aac8c6efed9d56a82c2bee0507be7d62c3))
+* **parser:** Add support for Conditions ([#260](https://github.com/LewisMK/goformation/issues/260)) ([1b00f17](https://github.com/LewisMK/goformation/commit/1b00f17a33109023ad8a4471812448dc1d0db776))
+* **parser:** Default to parsing as YAML unless the filename ends in .json ([#176](https://github.com/LewisMK/goformation/issues/176)) ([42e7146](https://github.com/LewisMK/goformation/commit/42e7146fb3974cd800fb20f332c7c9cd9ad84016))
+* Release v7 ([#499](https://github.com/LewisMK/goformation/issues/499)) ([28c3768](https://github.com/LewisMK/goformation/commit/28c37685fdeabd5ec3745413601eabfb1d480f67))
+* remove Go entities that don't exist anymore ([87cd632](https://github.com/LewisMK/goformation/commit/87cd6321d61cf69851882d0b7766ae8146e8bdfa))
+* remove go1.16 and add go1.19 support ([#529](https://github.com/LewisMK/goformation/issues/529)) ([583451d](https://github.com/LewisMK/goformation/commit/583451d6377ec3e35a59b2eeb6b9685021f7e70c))
+* **resources:** Add DependOn, DeletionPolicy and others to CustomResource ([#350](https://github.com/LewisMK/goformation/issues/350)) ([6712019](https://github.com/LewisMK/goformation/commit/671201953b1b8ba7f476e4f90a2cc5d46f542876))
+* **sam:** add missing fields to ScheduledEvents and remove required versions from IAM ([33395af](https://github.com/LewisMK/goformation/commit/33395afd746f31bfab003f56cf50cd984fc7d3b3))
+* **sam:** add SAM CognitoEvent EventSource ([#570](https://github.com/LewisMK/goformation/issues/570)) ([701fb3d](https://github.com/LewisMK/goformation/commit/701fb3d6621d1e738af9eea0c906020d9e0c190e))
+* **sam:** Add support for `AWS::Serverless::Api.TracingEnabled`, `AWS::Serverless::Function.PermissionsBoundary`, `AWS::Serverless::Function.DynamoEvent.Enabled`, `AWS::Serverless::Function.KinesisEvent.Enabled`, and `AWS::Serverless::Function.SQSEvent.Enabled` ([#191](https://github.com/LewisMK/goformation/issues/191)) ([38f0187](https://github.com/LewisMK/goformation/commit/38f0187f4c1c8b74adcc61853505e9dd0ddd9dea))
+* **sam:** serverless api model type fix ([#515](https://github.com/LewisMK/goformation/issues/515)) ([43e87d9](https://github.com/LewisMK/goformation/commit/43e87d928be8b1de98049e3a67989ef5b6ec3576))
+* **schema:** Add AWS::Serverless::Function.Auth ([#373](https://github.com/LewisMK/goformation/issues/373)) ([fc2877f](https://github.com/LewisMK/goformation/commit/fc2877f69d241cb8462f57e865f0bc7b756610f4))
+* **schema:** add CloudFormation parameter type ([#259](https://github.com/LewisMK/goformation/issues/259)) ([27fe204](https://github.com/LewisMK/goformation/commit/27fe204f7addb8cb1bd6e977b0f717c04b09364a))
+* **schema:** Add new DynamoDBEvent options ([#289](https://github.com/LewisMK/goformation/issues/289)) ([741228d](https://github.com/LewisMK/goformation/commit/741228d6923ea10f1d22a901bbddf106d5c71cd7))
+* **schema:** Add OpenApiVersion field to serverless Api ([#281](https://github.com/LewisMK/goformation/issues/281)) ([bccc71b](https://github.com/LewisMK/goformation/commit/bccc71b90531fb6bba8465b578fc2accc4dc6e34))
+* **schema:** Add support for Template Outputs ([#291](https://github.com/LewisMK/goformation/issues/291)) ([6875c50](https://github.com/LewisMK/goformation/commit/6875c50d00d8e1af71d9bad5788446b29ab03513))
+* **schema:** Add the ability to create items using pattern properties rather than normal references ([7b60160](https://github.com/LewisMK/goformation/commit/7b6016076b6653a7c930b15a94262db16aa93b5a))
+* **schema:** Add UpdateReplacePolicy to the templates and the policies so that it is generated for every resource ([#272](https://github.com/LewisMK/goformation/issues/272)) ([696c515](https://github.com/LewisMK/goformation/commit/696c515bcbb07105683a328ef0e161d62146114b))
+* **schema:** Added CloudWatch Logs event for SAM ([#271](https://github.com/LewisMK/goformation/issues/271)) ([fedb013](https://github.com/LewisMK/goformation/commit/fedb013e3b19ab1242cf8e3ae28a40240103d9b1))
+* **schema:** adding AWS::Serverless::StateMachine and FileSystemConfigs to Function ([#284](https://github.com/LewisMK/goformation/issues/284)) ([d2d23ca](https://github.com/LewisMK/goformation/commit/d2d23cafba606a8ea40649cc666073fa0e2d5ad3))
+* **schema:** AWS CloudFormation Update (2019-03-15) ([#189](https://github.com/LewisMK/goformation/issues/189)) ([8b332a4](https://github.com/LewisMK/goformation/commit/8b332a43dfe784d3c029cb0e9297dab4030ea943))
+* **schema:** AWS CloudFormation Update (2019-10-26) ([#231](https://github.com/LewisMK/goformation/issues/231)) ([63ca311](https://github.com/LewisMK/goformation/commit/63ca311c03a80b25124f506dafa39d81b5e029f3))
+* **schema:** AWS CloudFormation Update (2019-10-29) ([#239](https://github.com/LewisMK/goformation/issues/239)) ([7ff8499](https://github.com/LewisMK/goformation/commit/7ff84990c89e11815d22e06d377e110ae422cc17))
+* **schema:** CFN Updates ([#287](https://github.com/LewisMK/goformation/issues/287)) ([9778479](https://github.com/LewisMK/goformation/commit/97784795e35035b71b946d0ca69ef4d380d3b4a8))
+* **schema:** CloudFormation Updates ([#383](https://github.com/LewisMK/goformation/issues/383)) ([92fa1e3](https://github.com/LewisMK/goformation/commit/92fa1e3e8adf95e85b0d39f029a80d51e450437c))
+* **schema:** CloudFormation Updates (2019-12-09) ([#251](https://github.com/LewisMK/goformation/issues/251)) ([a23ba41](https://github.com/LewisMK/goformation/commit/a23ba416a24649c7296a0bc507c7940d9082ea30))
+* **schema:** CloudFormation Updates (2020-01-30) ([#263](https://github.com/LewisMK/goformation/issues/263)) ([fda2d31](https://github.com/LewisMK/goformation/commit/fda2d31f384eabbbf432ad1ee77ff8db6d0f2e73))
+* **schema:** CloudFormation Updates (2020-02-13) ([#266](https://github.com/LewisMK/goformation/issues/266)) ([bc75922](https://github.com/LewisMK/goformation/commit/bc75922eb604d6e43f290912234a644c4d7584b5))
+* **schema:** CloudFormation Updates (2020-02-22) ([#269](https://github.com/LewisMK/goformation/issues/269)) ([ffd88a6](https://github.com/LewisMK/goformation/commit/ffd88a6a9b0349853517e811169ee66804d79a2e))
+* **schema:** dummy commit - trigger CI for schema update ([66bc344](https://github.com/LewisMK/goformation/commit/66bc344ed6a17a613abbb4d217afcc0b8ea02b48))
+* **schema:** Improve cloudformation If to accept structs ([#368](https://github.com/LewisMK/goformation/issues/368)) ([3c1bcd8](https://github.com/LewisMK/goformation/commit/3c1bcd83e0e582aedeaf42f22e270b8a9f977863))
+* **schema:** Improve SAM Global support ([#376](https://github.com/LewisMK/goformation/issues/376)) ([d56929b](https://github.com/LewisMK/goformation/commit/d56929b269373078275877578e19f2f554ac6eff)), closes [#199](https://github.com/LewisMK/goformation/issues/199) [#305](https://github.com/LewisMK/goformation/issues/305)
+* **schema:** regenerated resources to apply SAM schema fixes from previous PR ([b30c019](https://github.com/LewisMK/goformation/commit/b30c019ec8df7a89e03a6e11a80b4b2056f7096f))
+* **schema:** Serverless eventbridgeruleevent ([#279](https://github.com/LewisMK/goformation/issues/279)) ([2a9e572](https://github.com/LewisMK/goformation/commit/2a9e572313485023dc4e57cb8facda72a3571307))
+* **schema:** serverless http api cors configuration ([a90bb03](https://github.com/LewisMK/goformation/commit/a90bb03ca3dfe7de1442c2cefe80aea4ea2aa211))
+* **schema:** Support condition properties in resources ([b3b7397](https://github.com/LewisMK/goformation/commit/b3b739703c2436466cfa9416aeba96840e09423c))
+* **schema:** Support custom resource types ([1274ccd](https://github.com/LewisMK/goformation/commit/1274ccd9317134522e92dd7fae402c7927076182))
+* **schema:** Support generation of array items that should be combined in one anyOf ([d5e468f](https://github.com/LewisMK/goformation/commit/d5e468fb4e4f83bcf08345232c8a7745fa0b7ff9))
+* **serverless:** add AlwaysDeploy option ([#615](https://github.com/LewisMK/goformation/issues/615)) ([e38c3b8](https://github.com/LewisMK/goformation/commit/e38c3b87b2640781fd5c8f3730e57aa1a31a21fd))
+* switch go-yaml implementation to most recent version ([#535](https://github.com/LewisMK/goformation/issues/535)) ([0ca6ce2](https://github.com/LewisMK/goformation/commit/0ca6ce24fa93544b7fa52054bef2fa4e4f82bad2))
+* **template:** support optional parameters ([#548](https://github.com/LewisMK/goformation/issues/548)) ([3344301](https://github.com/LewisMK/goformation/commit/3344301f7140503c719a301de36c02c1ec823e85))
+
+
+### Performance Improvements
+
+* reduce JSON CloudFormation template size ([f893af7](https://github.com/LewisMK/goformation/commit/f893af783a76ef4aff4c27710e2d4202c9fbf91a))
+
+
+### BREAKING CHANGES
+
+* Pointers are not used for Lists, Maps and interface{} members.
+* **generate:** DependsOn can now parse a single string instead of just a list of strings.
+* **types:** use cloudformation.{String,Int,...} as helpers for
+creating pointer types.
+* **generate:** optional parameters are now marked as a pointer.
+* **schema:** Improved implementation of Globals (in SAM tempates)
+
+This PR introduces a new implementation for both defining SAM templates with `Global` values, as well as parsing templates containing them.
+
+Note: Globals only apply to SAM templates - if you are using regular CloudFormation templates this breaking change should not impact you. The only impact you might see is if you are creating `cloudFormation.Template` structs manually rather than using the `cloudformation.NewTemplate()` constructor. As part of this change, a new field (`Globals`) was added to the `Template{}` struct. If you are not using the constructor, your compiler will probably complain that this field is missing from the struct instantiation in your code.    
+
+For more information about what `Globals` are in SAM templates, see this link:
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-specification-template-anatomy-globals.html
+
+In previous versions of Goformation (before v5), goformation was able to parse SAM templates that contained a `Globals` section, however the implementation just overwrote the resource properties in the template, with the global values at parse time.
+
+This meant that:
+
+ - It was not possible to compose a template in Go that had a Globals section.
+ - The JSON Schema generated by this repo, had no concept of Globals.
+
+ **This new implementation DOES NOT does not overwrite the values in the template, like the previous implementation did**. It replaces the old implementation completely, and exposes Globals as a series of structs that are marshalled/unmarshalled to/from JSON/YAML.
+
+ This allows you to compose a template:
+
+```go
+template := cloudformation.NewTemplate()
+
+template.Globals["Function"] = &global.Function{
+    Timeout: 1800,
+}
+```
+
+As well as parse a JSON/YAML template, and inspect the global properties:
+
+```go
+template, err := goformation.Open("../some-template-with-globals.yml")
+if err != nil {
+    fmt.Printf("failed to open template: %s\n", err)
+    os.Exit(1)
+} 
+
+fmt.Printf("%v", template.Globals["Function"])
+
+// You can view the global as above, however it's type is downcast to a basic interface.
+// If you want to inspect properties specific to the global type (e.g. the timeout for a Lambda function)
+// then use the following helper methods to get the various global types from the template:
+
+globalAPI, _:= template.GetServerlessGlobalApi()
+globalFunction, _ := template.GetServerlessGlobalFunction()
+globalHttpApi, _ := template.GetServerlessGlobalHttpApi()
+globalSimpleTable, _ := template.GetServerlessGlobalSimpleTable()
+
+fmt.Printf("Global Function Timeout: %d\n", globalFunction.Timeout)
+```
+* This change refactors the DependsOn, Metadata, CreationPolicy,
+UpdatePolicy and DeletionPolicy methods on each resource to a new
+name. This is required, as some CloudFormation resources use these
+keywords as properties (AWS::AppMesh::Route.GrpcRouteMatch has a
+Metadata field for example), which causes a conflict.
+
+`resource.DependsOn()` method is refactored to `resource.AWSCloudFormationDependsOn` field.
+`resource.SetDependsOn()` method is refactored to `resource.AWSCloudFormationDependsOn` field.
+`resource.Metadata()` method is refactored to `resource.AWSCloudFormationMetadata` field.
+`resource.SetMetadata()` method is refactored to `resource.AWSCloudFormationMetadata` field.
+`resource.CreationPolicy()` method is refactored to `resource.AWSCloudFormationCreationPolicy` field.
+`resource.SetCreationPolicy()` method is refactored to `resource.AWSCloudFormationCreationPolicy` field.
+`resource.UpdatePolicy()` method is refactored to `resource.AWSCloudFormationUpdatePolicy` field.
+`resource.SetUpdatePolicy()` method is refactored to `resource.AWSCloudFormationUpdatePolicy` field.
+`resource.DeletionPolicy()` method is refactored to `resource.AWSCloudFormationDeletionPolicy` field.
+`resource.SetDeletionPolicy()` method is refactored to `resource.AWSCloudFormationDeletionPolicy` field.
+* this change moves all Cloudformation resources to
+packages based on the AWS service name. The main motivation for this is
+that building goformation on some platforms (Windows) failed due to too
+many files in the old cloudformation/resources package. This new package
+style has a nice benefit of slightly nicer to use API, but is a breaking
+change and will require refactoring existing codebases to update to v3.
+
+Old usage:
+
+```go
+import "github.com/awslabs/goformation/v2/cloudformation/resources"
+
+... snip ...
+
+topic := &resources.AWSSNSTopic{}
+```
+
+New usage:
+
+```go
+import "github.com/awslabs/goformation/v3/cloudformation/sns"
+
+...snip...
+
+topic := &sns.Topic{}
+```
+
+Most tests are still failing at this point and need refactoring.
+
+* fix(schema): Tag handling
+
+Fixed tag handling for new grouped resources style (via new tags.Tag
+struct).
+
+* fix(schema): SAM specification
+
+SAM Specification now generates nicely with new grouped resources
+format. Also all tests are now passing \o/
+* **generator:** this PR refactors the auto-generated CloudFormation resources out of the cloudformation package and into a dedicated package (resources). This helps keep the auto generated files separate from others.
+
+E.g. cloudformation.AWSSnsTopic{} becomes resources.AWSSnsTopic{}
+
 ## [7.14.9](https://github.com/awslabs/goformation/compare/v7.14.8...v7.14.9) (2024-04-27)
 
 
